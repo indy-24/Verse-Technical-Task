@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Giphy - The Half-responsive Version</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href ="styles/stylesheet.css"/>
+  </head>
+  
+  <body>
+    <div class="page-wrapper">
+
+      <header class="page-header">
+        <nav role="navigation">
+          <ul class="navigation">
+            <!-- excluded logo from div below to only apply gradient background css to the other ul items -->
+            <li class="logo"><a href="#"><img src="./images/logo2.png"/></a></li>
+            <div class="nav-background">
+              <li><a href="#">Reactions</a></li>
+              <li><a href="#">Entertainment</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Stickers</a></li>
+              <li><a href="#">Artists</a></li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      
+      <main role="main">
+        <!-- search section -->
+        <div id="search-section">
+          <form class="search-form">
+            <div class="search-bar-container">
+              <input id="search-bar" type="search" placeholder="Search all the GIFs"/>
+              <button id="search-button"><img src="images/search-icon.svg"/></button>
+            </div>
+          </form>
+          <h1 id="search-heading"></h1>
+          <!-- Displays the searched results -->
+          <div id="search-results"></div>
+        </div> <!-- end search-section-->
+
+        <!-- trending section -->
+        <div id="trending">
+          <div class="trending-section">
+            <h1>TRENDING GIFS</h1>
+            <!-- Displays the trending results -->
+            <div class="trending-results"></div>
+            <p id="trending-number"></p>
+            <button id="load-more-trending">Load 12 more</button>
+          </div>
+        </div> <!-- end trending section-->
+      </main>
+
+      <footer class="page-footer">
+        <!-- Displayed as per t&cs -->
+        <p class="powered-giphy">Powered by GIPHY</p>
+        <p>Copyright &#169 Created by Inderjit Sandhu</p>
+        <p>Member (hopefully/possible/maybe) of Verse :)</p>
+      </footer>
+
+    </div> <!-- end page wrapper -->
+
+    <script src="scripts/javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+/*                                        Global styles
+--------------------------------------------------------------------------------------------------*/
+body {
+  background-color: #121212;
+  font-family: sans-serif;
+  /* Sets body font to 1em (16px) - this can be changed to dynamically modify entire website font size  */
+  font-size: 1em;
+}
+.page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h1, p {
+  color: #FFF;
+}
+
+/*                                   Header
+------------------------------------------------------------------------------*/
+/* ------------- Nav Bar ------------ */
+.page-header ul {
+  display: flex;
+  margin: 10px 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* gradient effect for nav bar background */
+.page-header .nav-background {
+  background: linear-gradient(90deg,#00ccff,#9933ff 31%,#e646b6 52%,#fff9aa 77%,#00ff99,#00ccff);
+  height: 100%;
+}
+.page-header ul li {
+  border-right: 4px solid #121212;
+  padding: 0 15px;
+}
+.page-header ul li.logo {
+  border-right: none;
+  padding: 0;
+}
+.page-header li {
+  list-style-type: none;
+  float: left;
+  height: 53px;
+}
+.page-header li a {
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  line-height: 52px;
+  font-size: 1em; /* 16px */
+  position: relative;
+  z-index: 2;
+}
+.page-header img {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.nav-background li::before {
+  content: "";
+  position: absolute;
+  height: 58px;
+  background-color: #121212;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/*                                   Main
+------------------------------------------------------------------------------*/
+/* ------------- Search ------------ */
+.search-bar-container {
+  position: relative;
+}
+#search-bar {
+  height: 53px;
+  width: 100%;
+  border: none;
+  font-size: 1em;
+  padding-left: 15px;
+}
+#search-button {
+  background: linear-gradient(45deg, rgb(153, 51, 255) 0%, rgb(255, 102, 102) 100%);;
+  height: 53px;
+  width: 53px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+}
+#search-button:hover {
+  cursor: pointer;
+}
+/* removes blue outline whilst in search bar*/
+input#search-bar:focus {
+  outline: 0;
+}
+/* Search placeholder font colour */
+#search-bar::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b3b3b3;
+  opacity: 1; /* Firefox */
+}
+#search-bar:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #b3b3b3;
+}
+#search-bar::-ms-input-placeholder { /* Microsoft Edge */
+  color: #b3b3b3;
+}
+/* ------------- Results ------------ */
+#search-section h1 {
+  display: none;
+}
+figure img {
+  width: 100%;
+  height: 244px;
+  margin: 0;
+}
+figure {
+  margin: 0;
+  width: 100%;
+  max-width: 240px;
+}
+#search-results, .trending-results {
+  max-width: 1000px;
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+  display: grid;
+  /* Automatically determines row size */
+  grid-auto-rows: auto; 
+  /* Defines columns - 200px each max */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  grid-gap: 1em;
+}
+.trending-results {
+  margin-bottom: 50px;
+}
+#search-results figure {
+  margin-bottom: 50px;
+}
+/* ------------- Trending ------------ */
+#load-more-trending {
+  background: linear-gradient(45deg, rgb(153, 51, 255) 0%, rgb(255, 102, 102) 100%);
+  border: none;
+  padding: 10px;
+  color: #FFF;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 10px;;
+  display: block;
+  margin: 20px auto;
+}
+#load-more-trending:hover {
+  cursor: pointer;
+}
+#trending-number {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  color: #b2b2b2;
+}
+.trending-section h1 {
+  color: #b2b2b2;
+  font-size: 1em;
+}
+
+/*                                   Footer
+------------------------------------------------------------------------------*/
+footer {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid #2b2b2b;
+}
+footer .powered-giphy {
+  font-weight: bold;
+}
